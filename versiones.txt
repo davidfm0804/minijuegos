@@ -1,0 +1,8 @@
+A:cuando se le da al minijuego te muestra el nombre y la url del que has pinchado
+
+1--Version separando cada ambito !!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+2--Version con el in y el implode
+
+B:
+3--Version con la url para mandarte al juego (también con el in y el implode)
