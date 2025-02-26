@@ -8,7 +8,12 @@ class Cambito {
     }
 
     public function cMostrarAmbitos() {
-        return $this->objambito->mMostrarAmbitos();
+        $ambito = $this->objambito->mMostrarAmbitos();
+        if(is_array($ambito)){
+            return $ambito;
+        }else{
+            return 'Error Al mostrar ambitos';
+        }
     }
 }
 ?>

@@ -14,9 +14,9 @@
     <form method="POST" action="listarMinijuegos.php">
         <h1>Elige Ámbitos</h1>
         <?php
-            while ($fila = $resultado->fetch_assoc()) {
-                $nombre = $fila['nombre'];
-                $idAmbito = $fila['idAmbito'];
+            foreach($resultado as $ambito) {
+                $nombre = $ambito['nombre'];
+                $idAmbito = $ambito['idAmbito'];
                 echo "<label>
                         <input type='checkbox' name='ambitos[]' value='$idAmbito'>
                         $nombre

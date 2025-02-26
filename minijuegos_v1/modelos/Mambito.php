@@ -16,7 +16,18 @@ class Mambito {
 
     public function mMostrarAmbitos() {
         $SQL = "SELECT * FROM ambito";
-        return $this->conexion->query($SQL);
+        $resultado = $this->conexion->query($SQL);
+        while ($fila = $resultado->fetch_assoc()) {
+            $ambitos[] = [
+                "idAmbito"=>$fila['idAmbito'],
+                "nombre"=>$fila['nombre']
+            ];
+        }
+        return $ambitos;
+        if($fila = $resultado->fetch_assoc()==0){
+            return false;
+        }
+        
     }
 }
 ?>
